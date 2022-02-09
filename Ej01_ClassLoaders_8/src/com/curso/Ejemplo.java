@@ -30,7 +30,7 @@ public class Ejemplo {
 		//Clases que están en las extensiones
 		System.out.println("Classloader de Logging    :" + Logging.class.getClassLoader()); //De JavaFX
 		//Clase que está en una librería añadida ilegalmente a lib/ext
-		System.out.println("Classloader de HttpClient :" + HttpClient.class.getClassLoader());
+		System.out.println(" Classloader de HttpClient :" + HttpClient.class.getClassLoader());
 		
 		//Api de Java
         System.out.println("Classloader de ArrayList  :" + ArrayList.class.getClassLoader());
@@ -48,7 +48,7 @@ public class Ejemplo {
         @SuppressWarnings("unchecked")        
         Class<String> stringClass = (Class<String>) urlClassLoader.loadClass("java.lang.String");
         System.out.println("Classloader de String:"+stringClass.getClassLoader());
-       
+         
         @SuppressWarnings("unchecked")        
 		Class<Conversor> conversorClass = (Class<Conversor>) urlClassLoader.loadClass("com.curso.ConversorMayusculas");
         Conversor conversor = conversorClass.newInstance();
@@ -60,4 +60,3 @@ public class Ejemplo {
         
     }
 }
-

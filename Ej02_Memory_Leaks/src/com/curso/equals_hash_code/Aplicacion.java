@@ -15,7 +15,7 @@ public class Aplicacion {
 		Thread.sleep(10_000);	
 		System.out.println("Creando productos y calificaciones...");		
 		
-		//La clave en el HashMap es el cliente
+		//La clave en el HashMap es el producto
 		Map<Producto,List<Integer>> productos = new HashMap<>();
 		for(int a=0; a<10_000_000; a++) {
 			Producto p = new Producto("Chisme electromecánico","ACME", "Bla bla blá");

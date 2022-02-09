@@ -10,7 +10,8 @@ public class Aplicacion {
 		System.out.println("Creando objetos...");			
 		
 		//Hasta que el cuerpo aguante
-		while(true) {
+		boolean Smith = true;
+		while(Smith) {
 			ClaseConFinalize ccf = new ClaseConFinalize();
 		}
 		

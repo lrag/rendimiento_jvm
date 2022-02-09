@@ -3,11 +3,11 @@ package com.curso.clases_internas;
 import java.util.Comparator;
 
 public class GeneradorComparadores {
-
+	
 	//static?
-	public Comparator<Integer> crearComparador(Integer valorCorrector) {
+	public static Comparator<Integer> crearComparador(Integer valorCorrector) {
 		
-		//'c' tendrá una referencia a la instancia de 'Ejemplo'!
+		//'c' tendrá una referencia a la instancia de 'GeneradorComparadores'!
 		@SuppressWarnings({ "unchecked", "rawtypes" })
 		Comparator<Integer> c = new Comparator() {
 			@Override
@@ -17,7 +17,6 @@ public class GeneradorComparadores {
 				return i1 - i2 - valorCorrector;
 			}
 		};
-		
 		return c;
 		
 		/*
@@ -26,7 +25,7 @@ public class GeneradorComparadores {
 			//¿Y si no se utiliza ningún componente de la clase nido?
 			return i1 - i2 - valorCorrector;			
 		};
-		*/
+		*/	
 		
 	}
 	

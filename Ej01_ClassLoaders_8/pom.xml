@@ -22,6 +22,7 @@
 	<dependencies>
 
 		<!-- 
+		Hemos metido ILEGALMENTE esta librería en jre/lib/ext
 		<dependency>
 		    <groupId>commons-httpclient</groupId>
 		    <artifactId>commons-httpclient</artifactId>
