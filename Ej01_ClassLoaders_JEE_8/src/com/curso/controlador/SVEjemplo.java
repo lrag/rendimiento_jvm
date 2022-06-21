@@ -35,9 +35,10 @@ public class SVEjemplo extends HttpServlet {
 
         System.out.println("Classloader de ArrayList  :" + ArrayList.class.getClassLoader());
         System.out.println("Classloader of Permission: " + java.sql.SQLPermission.class.getClassLoader());		
-
         
-        response.getWriter().append("Served at: ").append(request.getContextPath());
+        response.addHeader("Content-type", "text/html");
+        response.getWriter().append("<marquee><h1>Served at: ").append(request.getContextPath()).append("</h1></marquee>");
+        
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

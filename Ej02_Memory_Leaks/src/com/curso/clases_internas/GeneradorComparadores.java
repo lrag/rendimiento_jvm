@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class GeneradorComparadores {
 	
 	//static?
-	public static Comparator<Integer> crearComparador(Integer valorCorrector) {
+	public /*static*/ Comparator<Integer> crearComparador(Integer valorCorrector) {
 		
 		//'c' tendrá una referencia a la instancia de 'GeneradorComparadores'!
 		@SuppressWarnings({ "unchecked", "rawtypes" })

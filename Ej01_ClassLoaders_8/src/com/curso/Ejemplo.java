@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.httpclient.HttpClient;
 
+//Esto es ilegal y lo hacemos aquí por el interés de la ciencia
 import com.sun.javafx.util.Logging;
 
 public class Ejemplo {
@@ -26,7 +27,6 @@ public class Ejemplo {
 		//Clase en el classpath (en una libreria que hemos añadido al proyecto)
 		System.out.println("Classloader de BeanUtils  :" + BeanUtils.class.getClassLoader());
 		
-		
 		//Clases que están en las extensiones
 		System.out.println("Classloader de Logging    :" + Logging.class.getClassLoader()); //De JavaFX
 		//Clase que está en una librería añadida ilegalmente a lib/ext
@@ -36,12 +36,13 @@ public class Ejemplo {
         System.out.println("Classloader de ArrayList  :" + ArrayList.class.getClassLoader());
         System.out.println("Classloader of Permission :" + java.sql.SQLPermission.class.getClassLoader());
         
-        /*
-        Class x = Class.forName("org.apache.commons.httpclient.HttpClient");
-        System.out.println(x);
-        */
+        //Cargando clases despues de que haya arrancado la aplicación
+        Class x = Class.forName("com.curso.Saludador");
+        System.out.println(x.getName());
 
         System.out.println("========================================================================");
+        //Cargando clases que no están en el casspath
+        
         URL[] classLoaderUrls = new URL[]{new URL("file:conversor.jar")};
         URLClassLoader urlClassLoader = new URLClassLoader(classLoaderUrls);
        

@@ -7,13 +7,13 @@ import java.util.List;
 
 public class ClaseConFinalize {
 
-	private List<Integer> lista = new ArrayList<>(10_000);
+	private List<Integer> lista = new ArrayList<>(100_000);
 	
 	private FileWriter fw;
 	private Socket sk;
 	
 	@Override
-	public void finalize() {			
+	public void finalize() {	
 		System.out.println("Adios mundo cruel");
 		try {
 			//fw.close();

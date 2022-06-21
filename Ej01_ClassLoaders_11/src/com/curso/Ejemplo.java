@@ -25,7 +25,7 @@ public class Ejemplo {
 
 		// System.out.println("Classloader de Logging :" +
 		// Logging.class.getClassLoader()); //De JavaFX
-
+		
 		System.out.println("Classloader de ArrayList  :" + ArrayList.class.getClassLoader());
 		System.out.println("Classloader of Permission: " + java.sql.SQLPermission.class.getClassLoader());
 
@@ -37,7 +37,7 @@ public class Ejemplo {
 		// Conversor conversor = conversorClass.newInstance();
 		Conversor conversor = conversorClass.getConstructor().newInstance();
 		System.out.println("Classloader of Conversor  :" + conversor.getClass().getClassLoader());
-		System.out.println(conversor.convertir("hola radiola"));
+		System.out.println(conversor.convertir("hola raffaella"));
 
 		urlClassLoader.close();
 

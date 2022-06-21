@@ -19,7 +19,12 @@ public class Aplicacion {
 		System.out.println("=======================================");
 
 		ge = null;
+		
+		//Esto, si nos hacen caso, fuerza un GENERAL GC
+		long inicio = System.currentTimeMillis();
 		System.gc(); // :D
+		long fin = System.currentTimeMillis();
+		System.out.println("GC:"+(fin-inicio));
 		
 		Thread.sleep(160_000);
 		
@@ -27,3 +32,7 @@ public class Aplicacion {
 	}
 	
 }
+
+
+
+

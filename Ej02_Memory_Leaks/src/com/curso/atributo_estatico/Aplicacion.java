@@ -11,7 +11,7 @@ public class Aplicacion {
 		
 		GestorEventos ge = new GestorEventos();
 		for(int a=0; a<10_000_000; a++) {
-			ge.addEvento(Long.toString(Math.round(Math.random()*10_000)));
+			ge.enviarEvento(Long.toString(Math.round(Math.random()*10_000)));
 		}
 		
 		System.out.println("=======================================");

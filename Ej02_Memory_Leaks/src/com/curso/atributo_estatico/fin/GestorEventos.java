@@ -6,7 +6,7 @@ import java.util.List;
 public class GestorEventos {
 
 	//Quitamos el static para que la lista de eventos desaparezca con el GestorEventos
-	//o proporcionamos un sistema para que siga siendo estatico y los eventos antiguos se eliminen del listado
+	//o proporcionamos un sistema para que siga siendo estática y los eventos antíguos se eliminen del listado
 	public List<String> eventos = new ArrayList<String>();
 
 	public void addEvento(String evento) {
